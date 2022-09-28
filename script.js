@@ -65,18 +65,21 @@ function showOnShelf() {
   pushRead.classList.add("read");
   pushRead.textContent = "read";
   pushRead.addEventListener("click", () => {
-    currentBook.read == true
-      ? (currentBook.read = false)
-      : (currentBook.read = true);
+    if (currentBook.read == true) {
+      currentBook.read = false;
+      pushRead.style.backgroundColor = "#e04f63"; // check this again
+    } else {
+      currentBook.read = true;
+      pushRead.style.backgroundColor = "#63da63";
+    }
   });
   /* pushRead.dataset.prop = myLibrary.indexOf(currentBook);
   console.log(pushRead.dataset.prop); */
   pushBook.appendChild(pushRead);
-  console.log(currentBook.checked);
-  if (pushRead.checked == true) {
-    pushRead.style.backgroundColor = "green";
+  if (currentBook.read == true) {
+    pushRead.style.backgroundColor = "#63da63";
   } else {
-    pushRead.style.backgroundColor = "red";
+    pushRead.style.backgroundColor = "#e04f63";
   }
 
   let pushRemove = document.createElement("button");
