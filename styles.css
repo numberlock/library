@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+.shelf {
+  font-size: 2em;
+  display: flex;
+  gap: 1em;
+}
+
+.book {
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+}
+
+.float {
+  top: 15em;
+  position: absolute;
+  background-color: red;
+}
+
+.float-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.checkbox {
+  display: flex;
+}
+
+.read {
+  background-color: red;
+}
+
+.read-yes {
+  background-color: green;
+}
