@@ -8,22 +8,49 @@ body {
   font-size: 62.5%;
 }
 
+main {
+  margin-top: 5em;
+  display: flex;
+  gap: 4em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.add-to-library {
+  width: 8em;
+}
+
 .shelf {
+  text-align: center;
+  display: flex;
+  justify-content: center;
   font-size: 2em;
   display: flex;
   gap: 1em;
 }
 
 .book {
-  background-color: gray;
+  background-color: #e0e0e0;
+  padding: 0.5em;
+  width: 10em;
+  height: 12em;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
+  outline-color: #909090;
+  outline-width: 0.2em;
+  outline-style: solid;
+}
+.author {
+  margin-top: 1em;
 }
 
 .float {
-  top: 15em;
   position: absolute;
   background-color: red;
+  padding: 1em;
 }
 
 .float-title {
@@ -44,10 +71,10 @@ body {
   display: flex;
 }
 
-.read {
-  background-color: red;
-}
-
-.read-yes {
-  background-color: green;
+.blur {
+  width: 100vh;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.13);
+  backdrop-filter: blur(2px);
 }

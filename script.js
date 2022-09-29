@@ -99,11 +99,3 @@ function readColor() {
     location.classList.toggle("read-yes");
   }
 }
-
-/* user selects true or false
-need to check after they press add
-check if true
-add toggle to correct .read button
-
-read color for every created object
- */

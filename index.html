@@ -8,41 +8,43 @@
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <div>
-      <div class="shelf"></div>
-    </div>
-    <div class="float hidden">
-      <div class="float-title">
-        <div>New Book</div>
-        <div>X</div>
+    <main>
+      <button class="add-to-library">New Book</button>
+      <div>
+        <div class="shelf"></div>
       </div>
-      <form id="form" class="form">
-        <input
-          id="author"
-          type="text"
-          onfocus="this.value=''"
-          placeholder="Author"
-        />
-        <input
-          id="title"
-          type="text"
-          onfocus="this.value=''"
-          placeholder="Title"
-        />
-        <input
-          id="num-pages"
-          type="text"
-          onfocus="this.value=''"
-          placeholder="Number of pages"
-        />
-        <div class="checkbox">
-          <label for="read">Read:</label>
-          <input type="checkbox" id="read" />
+      <div class="float hidden blur">
+        <div class="float-title">
+          <div>New Book</div>
+          <div>X</div>
         </div>
-        <button class="submit">Add</button>
-      </form>
-    </div>
-    <button class="add-to-library">New Book</button>
+        <form id="form" class="form">
+          <input
+            id="author"
+            type="text"
+            onfocus="this.value=''"
+            placeholder="Author"
+          />
+          <input
+            id="title"
+            type="text"
+            onfocus="this.value=''"
+            placeholder="Title"
+          />
+          <input
+            id="num-pages"
+            type="text"
+            onfocus="this.value=''"
+            placeholder="Number of pages"
+          />
+          <div class="checkbox">
+            <label for="read">Read:</label>
+            <input type="checkbox" id="read" />
+          </div>
+          <button class="submit">Add</button>
+        </form>
+      </div>
+    </main>
     <script src="/script.js"></script>
   </body>
 </html>
