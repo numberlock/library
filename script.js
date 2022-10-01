@@ -27,11 +27,13 @@ newBook.addEventListener("click", () => {
   form.classList.toggle("hidden");
 });
 
-function book(author, title, numPages, read) {
-  this.author = author;
-  this.title = title;
-  this.numPages = numPages;
-  this.read = read;
+class book {
+  constructor(author, title, numPages, read) {
+    this.author = author;
+    this.title = title;
+    this.numPages = numPages;
+    this.read = read;
+  }
 }
 
 let currentBook;
@@ -42,6 +44,12 @@ function addBookToLibrary() {
 }
 
 function showOnShelf() {
+  let red = () => {
+    pushRead.style.backgroundColor = "#e04f63";
+  };
+  const green = () => {
+    pushRead.style.backgroundColor = "#63da63";
+  };
   let pushBook = document.createElement("div");
   shelf.appendChild(pushBook);
   pushBook.classList.add("book");
@@ -67,19 +75,19 @@ function showOnShelf() {
   pushRead.addEventListener("click", () => {
     if (currentBook.read == true) {
       currentBook.read = false;
-      pushRead.style.backgroundColor = "#e04f63"; // check this again
+      red(); // check this again
     } else {
       currentBook.read = true;
-      pushRead.style.backgroundColor = "#63da63";
+      green();
     }
   });
   /* pushRead.dataset.prop = myLibrary.indexOf(currentBook);
   console.log(pushRead.dataset.prop); */
   pushBook.appendChild(pushRead);
   if (currentBook.read == true) {
-    pushRead.style.backgroundColor = "#63da63";
+    green();
   } else {
-    pushRead.style.backgroundColor = "#e04f63";
+    red();
   }
 
   let pushRemove = document.createElement("button");
